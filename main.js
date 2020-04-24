@@ -39,6 +39,7 @@ function registerFieldsAreValid(firstName, lastName, email, username, password) 
 }
 
 function register() {
+    window.location.href = './register'
     const firstName = document.getElementById('inputFirstName').value.trim();
     const lastName = document.getElementById('inputLastName').value.trim();
     const email = document.getElementById('inputEmail').value.trim();
