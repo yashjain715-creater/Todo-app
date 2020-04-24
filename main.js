@@ -23,7 +23,7 @@ const API_BASE_URL = 'https://todo-app-csoc.herokuapp.com/';
 
 function logout() {
     localStorage.removeItem('token');
-    window.location.href = '/login';
+    window.location.href = './login';
 }
 
 function registerFieldsAreValid(firstName, lastName, email, username, password) {
@@ -61,7 +61,7 @@ function register() {
             data: dataForApiRequest,
             success: function(data, status, xhr) {
                 localStorage.setItem('token', data.token);
-                window.location.href = '/';
+                window.location.href = '../';
             },
             error: function(xhr, status, err) {
                 displayErrorToast('An account using same email or username is already created');
@@ -84,7 +84,7 @@ function login() {
         data : userdata,
         success : function(data,status,xhr){
             localStorage.setItem('token',data.token);
-            window.location.href = '/';
+            window.location.href = '../';
         },
         error: function(xhr,status,err){
             displayErrorToast('Invalid Username and Password');
